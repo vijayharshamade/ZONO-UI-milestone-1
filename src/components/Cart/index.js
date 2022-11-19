@@ -46,11 +46,12 @@ const Cart = () => {
     {id: 'Sony', brand: sonyArray},
   ]
 
-  //   const productDetails = toggle ? brands[0] : brands[1]
-  //   console.log(productDetails)
-  // console.log(apiData)
   const filteredData = apiData.filter(each => each.brand === defaultBrand)
-  console.log(filteredData)
+  // console.log(filteredData)
+
+  const onCheckout = event => {
+    event.preventDefault()
+  }
   return (
     <>
       <div className="ui-container">
@@ -59,9 +60,11 @@ const Cart = () => {
             <h1 className="heading">Brands</h1>
           </div>
           <div className="brand-item-container">
-            <ul className="list" onClick={onClickToggle}>
+            <ul className="list">
               {brands.map(each => (
-                <BrandItem key={each.id} apiData={each} />
+                <li onClick={onClickToggle}>
+                  <BrandItem key={each.id} apiData={each} />
+                </li>
               ))}
             </ul>
           </div>
@@ -81,11 +84,28 @@ const Cart = () => {
             </div>
           </div>
         </div>
+
         <div className="cart-container">
           <div className="heading-container">
             <div className="cart-heading-container">
               <h1 className="heading">Cart</h1>
             </div>
+            <div className="cart-item-container">
+              <h1 className="product-name">Product Name</h1>
+              <p className="product-qty">Qty: total:</p>
+            </div>
+          </div>
+          <div className="checkout-item-container">
+            <h1 className="check-no-of-items">Total no of Items: </h1>
+            <p className="checkout-total">
+              Grand Total:
+              <form className="form-container" onSubmit={onCheckout}>
+                <input type="text" className="input" placeholder="Name" />
+                <input type="text" className="input" placeholder="Email" />
+                <input type="number" className="input" placeholder="Mobile" />
+                <button type="submit">Check out</button>
+              </form>
+            </p>
           </div>
         </div>
       </div>

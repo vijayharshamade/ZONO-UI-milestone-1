@@ -48,3 +48,46 @@
 .product-list {
   background-color: transparent;
 }
+.cart-item-container {
+  margin-left: 15px;
+  margin-top: 15px;
+  border: 1px solid black;
+}
+.product-name {
+  font-size: 25px;
+  line-height: 0;
+}
+.product-qty {
+  font-size: 18px;
+}
+.checkout-item-container {
+  margin-left: 15px;
+  margin-top: 15px;
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #ffebcd;
+}
+.check-no-of-items {
+  font-size: 25px;
+  line-height: 0;
+}
+.checkout-total {
+  font-size: 18px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.list {
+  cursor: pointer;
+}

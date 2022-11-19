@@ -1,4 +1,5 @@
 import {useState} from 'react'
+
 import './index.css'
 
 const ProductItem = props => {
@@ -6,13 +7,23 @@ const ProductItem = props => {
   const {name, price} = eachProduct
 
   const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([])
+
   const onIncrement = () => {
     setCount(prevState => prevState + 1)
+    const cartItem = {
+      count,
+      name,
+      price,
+    }
+    setCart(prevState => [...prevState, cartItem])
   }
+  // console.log(cart)
 
   const onDecrement = () => {
     setCount(prevState => prevState - 1)
   }
+
   return (
     <>
       <div className="product-container">

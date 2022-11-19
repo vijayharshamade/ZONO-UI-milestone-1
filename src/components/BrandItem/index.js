@@ -3,6 +3,7 @@ import './index.css'
 const BrandItem = props => {
   const {apiData} = props
   const {id, brand} = apiData
+
   return (
     <>
       <div className="brand-container">
