@@ -6,7 +6,7 @@ const BrandItem = props => {
 
   return (
     <>
-      <div className="brand-container">
+      <li className="brand-container">
         <div className="brand-item-container">
           <div className="brand-icon-container">
             <p className="brand-icon-heading">{id[0]}</p>
@@ -16,7 +16,7 @@ const BrandItem = props => {
             <p>product count: {brand.length}</p>
           </div>
         </div>
-      </div>
+      </li>
     </>
   )
 }

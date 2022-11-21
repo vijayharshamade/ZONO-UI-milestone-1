@@ -56,3 +56,10 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+.add {
+  width: 45px;
+  margin-right: 10px;
+}
+.remove {
+  width: 65px;
+}
